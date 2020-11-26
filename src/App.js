@@ -37,13 +37,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Astronomy Picture of the Day</h1>
+      <h1 className="app-title">Astronomy Picture of the Day</h1>
       <form onSubmit={handleSubmit}>
-        <input type="date" min="1995-06-16" max={getCurrentDate()} value={dateInput} onChange={e => {setDateInput(e.target.value)}}/>
-        <button className="submit-btn" type="submit">Submit</button>
+        <input className="date-input" type="date" min="1995-06-16" max={getCurrentDate()} value={dateInput} onChange={e => {setDateInput(e.target.value)}}/>
+        <button className="submit-btn" type="submit">Search</button>
       </form>
-      {data.url && <img className="apod-image" src={data.hdurl} alt={data.title}/>}
-      {!data.url && <p>{error}</p>}
+      <div className="apod-pic">
+        {data.title && <h3 className="pic-title">{data.title}</h3>}
+        {data.media_type === "image" && <img className="apod-image" src={data.url} alt={data.title}/>}
+        {data.media_type === "video" && <iframe width="854" height="480" src={data.url} frameBorder="0" title={data.title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>}
+        {error && <h3 className="error-msg">Sorry, but your picture is in another date!</h3>}
+      </div>
+
     </div>
   );
 }

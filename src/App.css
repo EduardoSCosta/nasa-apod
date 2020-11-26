@@ -1,14 +1,54 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-title {
+  margin: 10px 0 10px 0;
+}
+
 .apod-image{
   width: auto;
   height: auto;
-  max-height: 500px;
+  max-height: 480px;
 }
 
 form {
-  margin: 10px; 
+  background-color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  margin: 10px;
+  border: solid 0px;
+  border-radius: 20px;
+}
+
+.date-input {
+  height: 30px;
+  margin: 0 5px 0 5px;
 }
 
 .submit-btn {
-  padding: 5px;
-  border: solid 1px;
+  height: 30px;
+  width: 80px;
+  margin-left: 5px;
+  background-color: #e1edff;
+  border-radius: 20px;
+  outline: none;
+  transition: filter 0.5s;
+}
+
+.submit-btn:hover {
+  filter: brightness(96%);
+}
+
+.apod-pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-msg {
+  font-family: 'Press Start 2P', cursive;
 }
