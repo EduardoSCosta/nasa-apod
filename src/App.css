@@ -6,13 +6,15 @@
 }
 
 .app-title {
+  width: 100%;
+  text-align: center;
   margin: 10px 0 10px 0;
 }
 
 .apod-image{
   width: auto;
   height: auto;
-  max-height: 480px;
+  max-width: 100%;
 }
 
 form {
@@ -25,7 +27,9 @@ form {
 
 .date-input {
   height: 30px;
+  width: 150px;
   margin: 0 5px 0 5px;
+  outline: none;
 }
 
 .submit-btn {
@@ -47,6 +51,8 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 .error-msg {

@@ -10,7 +10,6 @@ function App() {
     return todayDate;
   }
 
-
   const [data, setData] = useState([]);
   const [dateInput, setDateInput] = useState("");
   const [error, setError] = useState("");
@@ -34,7 +33,6 @@ function App() {
     api_call(); 
   }
 
-
   return (
     <div className="App">
       <h1 className="app-title">Astronomy Picture of the Day</h1>
@@ -45,11 +43,10 @@ function App() {
       <div className="apod-pic">
         {data.title && <h3 className="pic-title">{data.title}</h3>}
         {data.media_type === "image" && <img className="apod-image" src={data.url} alt={data.title}/>}
-        {data.media_type === "video" && <iframe width="854" height="480" src={data.url} frameBorder="0" title={data.title}
+        {data.media_type === "video" && <iframe width="640" height="360" src={data.url} frameBorder="0" title={data.title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>}
         {error && <h3 className="error-msg">Sorry, but your picture is in another date!</h3>}
       </div>
-
     </div>
   );
 }
