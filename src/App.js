@@ -6,7 +6,9 @@ function App() {
 
   const getCurrentDate = () => {
     const todayDateTime = new Date();
-    const todayDate = todayDateTime.getFullYear()+'-'+(todayDateTime.getMonth()+1)+'-'+todayDateTime.getDate();
+    const todayDate = todayDateTime.getFullYear()+'-'+
+                      ('0'+(todayDateTime.getMonth()+1)).slice(-2)+'-'+
+                      ('0'+(todayDateTime.getDate())).slice(-2);
     return todayDate;
   }
 

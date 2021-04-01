@@ -9,6 +9,7 @@
   width: 100%;
   text-align: center;
   margin: 10px 0 10px 0;
+  color: #e8e8e8;
 }
 
 .apod-image{
@@ -36,14 +37,19 @@ form {
   height: 30px;
   width: 80px;
   margin-left: 5px;
-  background-color: #e1edff;
+  background-color: #bfbfbf;
   border-radius: 20px;
   outline: none;
-  transition: filter 0.5s;
+  font-size: 0.9rem;
+  transition: filter 0.3s;
 }
 
 .submit-btn:hover {
-  filter: brightness(96%);
+  filter: brightness(80%);
+}
+
+.pic-title {
+  color: #e8e8e8;
 }
 
 .apod-pic {
